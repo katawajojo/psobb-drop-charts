@@ -1,13 +1,14 @@
--- drop chart data was acquired from Ephinea
--- https://ephinea.pioneer2.net/drop-charts/normal/
+-- drop chart data was acquired from Ultima
+-- https://www.phantasystaronline.net/forum/index.php?/droptable/drop-tables/&type=1
+-- box drop data was removed, due to lack of data.
 
 -- imports
 local core_mainmenu = require("core_mainmenu")
 local drop_charts = {
-  ["Normal"] = require("Drop Charts.normal"),
-  ["Hard"] = require("Drop Charts.hard"),
-  ["Very Hard"] = require("Drop Charts.very-hard"),
-  ["Ultimate"] = require("Drop Charts.ultimate")
+  ["Normal"] = require("Ultima Drop Charts.normal"),
+  ["Hard"] = require("Ultima Drop Charts.hard"),
+  ["Very Hard"] = require("Ultima Drop Charts.very-hard"),
+  ["Ultimate"] = require("Ultima Drop Charts.ultimate")
 }
 
 -- window vars
@@ -102,11 +103,8 @@ local difficulty_color = {
 -- episode order
 local episode = {
   "EPISODE 1",
-  "EPISODE 1 Boxes",
   "EPISODE 2",
-  "EPISODE 2 Boxes",
-  "EPISODE 4",
-  "EPISODE 4 Boxes"
+  "EPISODE 4"
 }
 
 -- column headers for the drop charts
@@ -608,7 +606,7 @@ local function present()
 	counter = counter + 1
     local status, dataFound = false
     imgui.SetNextWindowSize(700, 520, "FirstUseEver");
-    status, window_open = imgui.Begin("Drop Charts", window_open)
+    status, window_open = imgui.Begin("Ultima Drop Charts", window_open)
 	-- @todo: using counter prevents auto mode from updating upon party changes
     -- if counter % update_interval == 0 then
         local side = get_side_text()
@@ -638,13 +636,13 @@ end
 
 
 local function init()
-  core_mainmenu.add_button("Drop Charts", button_func)
+  core_mainmenu.add_button("Ultima Drop Charts", button_func)
   
   return {
-    name = "Drop Charts",
-    version = "1.1.1",
-    author = "Seth Clydesdale",
-    description = "Drop chart reference for PSOBB.",
+    name = "Ultima Drop Charts",
+    version = "1.1.1-u",
+    author = "Seth Clydesdale (Modified by @katawajojo)",
+    description = "Drop chart reference for PSOBB. Modified for use with Ultima.",
     present = present
   }
 end
