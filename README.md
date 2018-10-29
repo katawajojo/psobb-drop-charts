@@ -24,7 +24,7 @@ After this you can select the difficulty and section id to see what item an enem
 
 ### To-do List
 - Add Drop Tables for boxes. Ultima doesn't currently have data for these drop rates.
-- Hopefully fix the "Auto Mode" from the original plugin. Auto Mode doesn't work due to Ultima not having any kind of ``/partyinfo`` command.
+- Hopefully fix the "Auto Mode" from the original plugin.
 - Create a tool to make the table updating a little less painful.
 
 ### Special Thanks to...
